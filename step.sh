@@ -2,9 +2,11 @@
 set -ex
 
 # echo "This is the value specified for the input 'example_step_input': ${example_step_input}"
-curl --location --request POST 'https://api-sofy-test.azurewebsites.net/api/AppTests/buildUpload' \
---header 'SubscriptionKey: $upload_token' \
---form 'applicationFile=@$buildpath'
+echo "build path "${build_path}""
+echo "token ${upload_token}"
+#status=$(curl --location --request POST 'https://api-sofy-test.azurewebsites.net/api/AppTests/buildUpload' --header 'SubscriptionKey: $upload_token' --form 'applicationFile="${build_path}"')
+#echo $status
+
 #
 # --- Export Environment Variables for other Steps:
 # You can export Environment Variables for other Steps with
@@ -21,3 +23,10 @@ curl --location --request POST 'https://api-sofy-test.azurewebsites.net/api/AppT
 # The exit code of your Step is very important. If you return
 #  with a 0 exit code `bitrise` will register your Step as "successful".
 # Any non zero exit code will be registered as "failed" by `bitrise`.
+#curl --location --request POST 'https://api-sofy-test.azurewebsites.net/api/AppTests/buildUpload' \
+#--header 'SubscriptionKey: acc80bd1-5cb7-4c89-a01e-2e7169009e52' \
+#--form 'applicationFile=@"/Users/sofy/Downloads/final/bitrise-step-testing-uploading/_tmp/fb.apk"'
+
+curl --location --request POST 'https://api-sofy-test.azurewebsites.net/api/AppTests/buildUpload' \
+--header "SubscriptionKey: ${upload_token}" \
+--form "applicationFile=@"${build_path}""

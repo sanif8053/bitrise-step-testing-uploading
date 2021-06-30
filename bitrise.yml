@@ -40,8 +40,9 @@ workflows:
           file if you would not specify another value.
         run_if: true
         inputs:
-        - build_path: /Users/SanifPC/Desktop/build/intro_android_demo/fb.apk
-        - upload_token: $upload_token
+        - build_path: "/Users/sofy/Downloads/final/bitrise-step-testing-uploading/_tmp/fb.apk"
+        - upload_token: acc80bd1-5cb7-4c89-a01e-2e7169009e52
+
 
 
   # ----------------------------------------------------------------
