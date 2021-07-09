@@ -68,7 +68,7 @@ inputs:
   
   - build_path:
     opts:
-      title: Build path
+      title: Build_path
       summary: A `.app`, `.ipa`, or `.apk` path.
       description: |
         A `.app`, `.ipa`, or `.apk` path.
@@ -81,19 +81,19 @@ inputs:
 
   - upload_token:
     opts:
-      title: upload token
+      title: upload_token
       description: |
         Each application registered in portal is associated with a unique upload
         token.
       is_required: true
       is_sensitive: true    
 
-outputs:
-  - EXAMPLE_STEP_OUTPUT:
-    opts:
-      title: "Example Step Output"
-      summary: Summary. No more than 2-3 sentences.
-      description: |
-        Description of this output.
+# outputs:
+#   - EXAMPLE_STEP_OUTPUT:
+#     opts:
+#       title: "Example Step Output"
+#       summary: Summary. No more than 2-3 sentences.
+#       description: |
+#         Description of this output.
 
-        Can be Markdown formatted text.
+#         Can be Markdown formatted text.
